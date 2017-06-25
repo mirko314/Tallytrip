@@ -14,4 +14,13 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery
+//= require jquery_ujs
+//= require jquery-ui
+
+$(document).ready(function(){
+    $("i").click(function(){
+        $(".toggel-green").toggleClass("done");
+    });
+});
 

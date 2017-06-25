@@ -39,7 +39,6 @@ class ItemsController < ApplicationController
 
     def check
         @item.update_attribute(:checked_at, Time.now)
-        redirect_to root_path
     end
 
     private
