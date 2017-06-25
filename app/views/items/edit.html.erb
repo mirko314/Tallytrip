@@ -1,0 +1,7 @@
+<h1>Item bearbeiten</h1>
+<br>
+<%= simple_form_for @item do |f| %>
+  <%= f.input :title , label: "Titel"%>
+  <%= f.input :description, label: "Beschreibung" %>
+  <%= f.button :submit, "Fertig" %>
+<% end %>
