@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-    before_action :find_item, only: [:show, :edit, :update, :destroy]
+    before_action :find_item, only: [:show, :edit, :update, :destroy, :check]
     
     def index
         @items = Item.all.order("created_at ASC")
@@ -35,6 +35,11 @@ class ItemsController < ApplicationController
         else
             render 'edit'
         end
+    end
+
+    def check
+        @item.update_attribute(:checked_at, Time.now)
+        redirect_to root_path
     end
 
     private
