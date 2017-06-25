@@ -1,0 +1,10 @@
+<h1>Neues Item anlegen</h1>
+<br>
+<%= simple_form_for @item do |f| %>
+  <%= f.input :title , label: "Titel"%>
+  <%= f.input :description, label: "Beschreibung" %>
+  <%= f.button :submit, "Hinzufügen" %>
+<% end %>
+
+
+

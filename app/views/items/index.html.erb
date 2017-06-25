@@ -1,1 +1,9 @@
-<h1>Meine erste Rails App!</h1>
+<h1>Packliste</h1>
+<p>Neues Item hinzufügen...</p>
+
+<button type="button" class="btn btn-default"><%= link_to "Item hinzufügen", new_item_path %></button>
+<br><br>
+<% @items.each do |item| %>
+    <h2><%= item.title %></h2>
+    <p><%= item.description %></p>
+<% end %>
