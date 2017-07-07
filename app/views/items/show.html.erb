@@ -1,6 +1,10 @@
+<div class="row">
+<div class="col-md-3 modul">
 <h2><%= @item.title %></h2>
 <p><%= @item.description %></p>
 
 <%= link_to "Zurück", root_path %>
 <%= link_to "Bearbeiten", edit_item_path %>
 <%= link_to "Löschen", item_path(@item), method: :delete, data: {confirm: "Bist du sicher?"} %>
+</div>
+</div>
