@@ -21,20 +21,10 @@
 
 
 
-
-//var dataId = $('div').data('params-id');
-
-//var id;
-//var $div = $('div');
-//if(id = $div.data('params-id'))
-//   $(document).ready(function(){
-//    $("i").click(function(){
-//        $(".toggel-green").toggleClass("done");
-//    });
-//});
-//else 
-//    alert('Schiefgelaufen!');
-
-
-
-
+$(document).ready(function(){
+    $("i").click(function(){
+        var id = $(this).data("itemid")
+        alert(id)
+        $(".toggel-green[data-itemid=" + id + "]").toggleClass("done");
+    });
+});
